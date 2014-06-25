@@ -4,6 +4,11 @@ var myApp = new Framework7();
 // Export selectors engine
 var $$ = Framework7.$;
 
+document.addEventListener("deviceready", onDeviceReady, false);
+  function onDeviceReady() {
+    FastClick.attach(document.body);
+}
+
 // Add views
 var view1 = myApp.addView('#view-1');
 var view2 = myApp.addView('#view-2', {
